@@ -1,0 +1,52 @@
+<div class="container">
+
+    <form (ngSubmit)="onSubmit()">
+      <div>
+        
+        <mat-form-field floatPlaceholder="never">
+            <input placeholder="Name" matInput type="text" [(ngModel)]="newGift.name" name="name" required>
+        </mat-form-field>
+        
+      </div>
+
+      <div>
+        <mat-form-field>
+        <input matInput placeholder="Category" type="text" [(ngModel)]="newGift.category" name="category" required>
+      </mat-form-field>
+      </div>
+
+      <div>
+          <mat-form-field>
+        <input matInput placeholder="Description" type="text" [(ngModel)]="newGift.description" name="description" >
+        </mat-form-field>
+      </div>
+      <div>
+          <mat-form-field>
+          <input matInput placeholder="Price" type="number" [(ngModel)]="newGift.price" name="price" required>
+        </mat-form-field>
+      </div>
+      <div>
+        <mat-form-field>
+          <input matInput placeholder="Discount" type="number" [(ngModel)]="newGift.discount" name="discount">
+        </mat-form-field>
+      </div>
+      <div>
+        <mat-form-field>
+          <input matInput placeholder="Image url" type="text" [(ngModel)]="newGift.imgurl" name="imgurl" >
+        </mat-form-field>
+      </div>
+      <div>
+          <label for="inStock">Available: </label>
+          <select [(ngModel)]="newGift.inStock" name = "inStock" >
+
+              <option value="true">Yes</option>
+              <option value="false">No</option>
+              
+  
+          </select>
+      </div>
+
+      <button type="submit" mat-button>Submit</button>
+
+    </form>
+</div>

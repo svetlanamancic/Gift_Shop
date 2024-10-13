@@ -1,0 +1,11 @@
+<mat-toolbar color="primary">
+    <div >
+      <ul  class="navigation-items">
+          <li><a routerLink="/">Home</a></li>
+          <li *ngIf="!auth.isLoggedIn()"><a routerLink="/login">Sign in</a></li>
+          <li *ngIf="!auth.isLoggedIn()"><a routerLink="/signup">Sign up</a></li>
+          <li *ngIf="auth.isLoggedIn()"><a routerLink="/profile">Profile</a></li>
+          <li *ngIf="auth.isLoggedIn()" id="logout"><a (click)="auth.logout()"  routerLink="/">Logout</a></li>
+      </ul>
+    </div>
+</mat-toolbar>
